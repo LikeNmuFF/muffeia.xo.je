@@ -1,0 +1,29 @@
+.notification {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.notification-content p {
+    margin-bottom: 0.5rem;
+}
+.notification-content small {
+    color: var(--text-secondary);
+}
+
+.notification .notification-link {
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.notification .delete-btn {
+    background: transparent;
+    color: var(--text-secondary);
+    padding: 0.5rem;
+}
+.notification .delete-btn:hover {
+    background: transparent;
+    color: var(--danger-color);
+    text-decoration: none;
+}

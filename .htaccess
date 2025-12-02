@@ -1,0 +1,59 @@
+# Turn on the Rewrite Engine
+RewriteEngine On
+
+# Optional: Set the base path if your app is in a subdirectory (e.g., /app/)
+RewriteBase /
+
+# ----------------------------------------------------
+# CUSTOM 404,403,500 ERROR HANDLING
+# ----------------------------------------------------
+ErrorDocument 404 /includes/err/ZXJyb3JwYWdl/404.php
+ErrorDocument 403 /includes/err/ZXJyb3JwYWdl/403.php
+ErrorDocument 500 /includes/err/ZXJyb3JwYWdl/500.php
+
+# ----------------------------------------------------
+# 1. FIX: Skip the Redirect if the request method is POST
+# This allows form submissions (like to post_problem.php) to be processed directly
+# ----------------------------------------------------
+RewriteCond %{REQUEST_METHOD} !^POST$ [NC]
+
+# Original EXTERNAL REDIRECT: Redirects requests with the .php extension to the clean URL
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^.]+)\.php\ HTTP/ [NC]
+RewriteRule ^([^.]+)\.php$ /$1 [R=301,L]
+
+# ----------------------------------------------------
+# 2. INTERNAL FORWARD: Handles clean URLs and serves the corresponding .php file
+# ----------------------------------------------------
+# It ensures the request is not for an existing file or directory.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [NC,L]
+
+# ----------------------------------------------------
+# 3. CATCH ALL 404 ERRORS
+# This handles any remaining requests that don't match existing files/directories
+# ----------------------------------------------------
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule .* /404.php [L]
+
+# ----------------------------------------------------
+# SECURITY HEADERS (Optional but recommended)
+# ----------------------------------------------------
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options nosniff
+    Header always set X-Frame-Options DENY
+    Header always set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# ----------------------------------------------------
+# PERFORMANCE (Optional)
+# ----------------------------------------------------
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType text/css "access plus 1 week"
+    ExpiresByType application/javascript "access plus 1 week"
+</IfModule>

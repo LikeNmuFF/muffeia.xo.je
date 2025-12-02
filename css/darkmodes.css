@@ -1,0 +1,50 @@
+/* Light/Dark Mode Toggle Icon */
+.toggle-container {
+    position: absolute; /* Place in the top-left corner */
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--button-bg-light, #ffffff); /* Default to light mode styles */
+    border-radius: 50%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), inset 0px 2px 4px rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+.toggle-container:hover {
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3), inset 0px 4px 6px rgba(255, 255, 255, 0.6);
+    transform: scale(1.1);
+}
+
+.toggle-container:active {
+    transform: scale(0.9);
+}
+
+.icon {
+    font-size: 1.8em; /* Adjust icon size */
+    color: var(--highlight-color-light, #ffd700); /* Default to light mode */
+    transition: transform 0.5s, color 0.3s;
+}
+
+/* Dark Mode Toggle Styles */
+.dark-mode .toggle-container {
+    background: var(--button-bg-dark, #333333);
+}
+
+.dark-mode .icon {
+    color: var(--highlight-color-dark, #4a90e2);
+    transform: rotate(360deg); /* Smooth rotation on toggle */
+}
+body.dark-mode {
+    background-color: #121212; /* Dark background */
+    color: #ffffff;          /* Light text */
+}
+
+body.dark-mode a {
+    color: #4a90e2; /* Adjust link colors for dark mode */
+}
