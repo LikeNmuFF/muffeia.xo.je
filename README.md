@@ -1,788 +1,440 @@
-# 🌐 Muffeia - Community Problem-Sharing Platform
+<div align="center">
 
-> **A modern, secure community platform where people share their problems and find solutions together.**
+<!-- ANIMATED HEADER WAVE -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,50:302b63,100:24243e&height=200&section=header&text=Muffeia&fontSize=72&fontColor=ffffff&fontAlignY=38&desc=Community%20Problem-Sharing%20Platform&descAlignY=60&descSize=20&animation=fadeIn&fontAlign=50" width="100%"/>
 
-<p align="center">
-  <img src="./assets/muffeia_hero_banner.svg" alt="Muffeia Hero Banner - Problem to Solution flow" width="100%" style="max-width: 690px;">
+<!-- ANIMATED TYPING HEADLINE -->
+<a href="#">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=22&pause=1000&color=A78BFA&center=true&vCenter=true&width=700&lines=🔒+Privacy-first+community+platform;💬+End-to-end+encrypted+messaging;🌍+Where+problems+find+their+solutions;🛡️+Intelligent+content+moderation;⚡+Real-time+notifications+%26+presence" alt="Typing SVG" />
+</a>
+
+<br/>
+
+<!-- SHIELD BADGES ROW 1 -->
+<p>
+  <img src="https://img.shields.io/badge/Version-3.0-blueviolet?style=for-the-badge&logo=rocket&logoColor=white" />
+  <img src="https://img.shields.io/badge/Status-Production%20Ready-22c55e?style=for-the-badge&logo=checkmarx&logoColor=white" />
+  <img src="https://img.shields.io/badge/License-MIT-f59e0b?style=for-the-badge&logo=opensourceinitiative&logoColor=white" />
+  <img src="https://img.shields.io/badge/PHP-7.0%2B-777BB4?style=for-the-badge&logo=php&logoColor=white" />
 </p>
 
----
-
-## 📋 Table of Contents
-
-- [Overview](#overview)
-- [Key Features](#key-features)
-- [Technology Stack](#technology-stack)
-- [Project Structure](#project-structure)
-- [Installation Guide](#installation-guide)
-- [Configuration](#configuration)
-- [Usage](#usage)
-- [API Endpoints](#api-endpoints)
-- [Security](#security)
-- [Deployment](#deployment)
-- [Contributing](#contributing)
-- [License](#license)
-- [Support](#support)
-
----
-
-## 🎯 Overview
-
-**Muffeia** is a sophisticated, full-stack web application designed to foster a safe and inclusive community where individuals can:
-
-- **Post problems** they're facing (personal, technical, educational, etc.)
-- **Receive solutions** from community members with relevant expertise
-- **Engage with peers** through discussions, comments, and direct messaging
-- **Build reputation** through helpful contributions and community recognition
-- **Discover content** via categories, tags, and advanced search functionality
-- **Participate anonymously** for sensitive topics or openly to build personal brand
-
-### Vision
-
-To create a **safer alternative to traditional Q&A and support platforms** by emphasizing:
-- 🔒 **Privacy**: End-to-end encrypted direct messaging
-- 👥 **Community**: Gamified reputation system and public recognition
-- 🛡️ **Safety**: Intelligent content moderation and community guidelines
-- 🌍 **Inclusivity**: Multi-language support with UTF-8MB4 encoding
-
----
-
-## ✨ Key Features
-
-<p align="center">
-  <img src="./assets/muffeia_features_grid.svg" alt="Muffeia Key Features grid" width="100%" style="max-width: 680px;">
+<!-- SHIELD BADGES ROW 2 -->
+<p>
+  <img src="https://img.shields.io/badge/MySQL-5.7%2B-4479A1?style=for-the-badge&logo=mysql&logoColor=white" />
+  <img src="https://img.shields.io/badge/Apache-mod__rewrite-D22128?style=for-the-badge&logo=apache&logoColor=white" />
+  <img src="https://img.shields.io/badge/Encryption-AES--256--CBC-0ea5e9?style=for-the-badge&logo=letsencrypt&logoColor=white" />
+  <img src="https://img.shields.io/badge/Moderation-1360%2B%20Terms-ef4444?style=for-the-badge&logo=shield&logoColor=white" />
 </p>
 
-### Core Features
+<br/>
 
-#### 👤 User Management
-- **Multi-authentication methods**: Email/Password, Google OAuth, Facebook OAuth
-- **Email verification** with secure token system
-- **User profiles** with statistics and contribution history
-- **Account management** including secure deletion workflows
-- **Online status** and presence tracking
-
-#### 📝 Content Management
-- **Post problems** with categories, tags, and descriptions
-- **Submit solutions** with community voting
-- **Accept best solution** feature to mark definitive answers
-- **Edit & delete** your own content
-- **Bookmarking** for saving posts to read later
-- **View analytics** (likes, views, reply count)
-
-#### 💬 Community Engagement
-- **Direct messaging** with end-to-end encryption (AES-256-CBC)
-- **Group chat rooms** for community discussions
-- **Real-time notifications** for replies, messages, and mentions
-- **Like/unlike** problems and solutions
-- **Reputation system** with badges and recognition
-- **Leaderboard** showcasing top contributors
-- **Follow categories and tags** for personalized feed
-
-#### 🛡️ Content Moderation
-- **Intelligent bad word filtering** (1,360+ moderated terms)
-- **Obfuscation detection** to prevent filter bypass
-- **Report inappropriate content** with admin review
-- **Text masking** for profanity
-- **Spam detection** via rate limiting
-- **Admin moderation dashboard**
-
-#### 🔍 Discovery & Search
-- **Full-text search** across users and posts
-- **Category browsing** with hierarchical organization
-- **Tag exploration** and trending tags
-- **Advanced search filters** by date, popularity, solved status
-- **Pagination** for efficient data loading
-- **SEO-optimized** with sitemap and robots.txt
-
-#### 🔒 Security Features
-- **Password hashing** with bcrypt
-- **CSRF protection** on all forms
-- **SQL injection prevention** via prepared statements
-- **XSS protection** through HTML escaping
-- **Rate limiting** (120 requests/minute per IP)
-- **AES-256-CBC encryption** for private messages
-- **Email verification tokens**
-- **Secure session management**
+</div>
 
 ---
 
-## 🛠️ Technology Stack
+## ✦ What is Muffeia?
 
-<p align="center">
-  <img src="./assets/muffeia_tech_stack.svg" alt="Muffeia Technology Stack - Frontend, Backend, Data layers" width="100%" style="max-width: 680px;">
-</p>
+> **A sophisticated, full-stack community platform** where people share their problems and find solutions together — built with **privacy**, **security**, and **inclusivity** at its core.
 
-### Dependencies
+<table>
+<tr>
+<td width="50%">
 
-| Package | Purpose | Version |
-|---------|---------|---------|
-| `phpmailer/phpmailer` | Email delivery | ^7.0 |
-| `league/oauth2-facebook` | Facebook authentication | ^2.2 |
-| `league/oauth2-google` | Google authentication | ^5.0 |
-| `guzzlehttp/guzzle` | HTTP client | (transitive) |
+**For Users**
+
+- 📮 Post problems, get community solutions
+- 💬 End-to-end encrypted DMs
+- 🏆 Earn reputation & badges
+- 🔖 Bookmark & follow topics
+- 🕵️ Post anonymously if needed
+
+</td>
+<td width="50%">
+
+**For the Community**
+
+- 🛡️ Intelligent bad-word filtering
+- 🌍 Multi-language (UTF-8MB4)
+- 🔍 Full-text search & trending tags
+- 📊 Leaderboard of top contributors
+- 👥 Group chat rooms
+
+</td>
+</tr>
+</table>
 
 ---
 
-## 📁 Project Structure
+## ✦ Technology Stack
+
+<div align="center">
+
+<img src="https://skillicons.dev/icons?i=php,mysql,js,html,css,apache,git,docker,github,composer&theme=dark&perline=10" />
+
+</div>
+
+<br/>
+
+<div align="center">
+
+|      Layer      |        Technology        | Detail                                |
+| :-------------: | :----------------------: | :------------------------------------ |
+| 🖥️ **Backend**  |         PHP 7.0+         | 299 PHP files, MVC-style architecture |
+| 🗄️ **Database** | MySQL 5.7 / MariaDB 10.2 | Prepared statements, full-text search |
+| ⚡ **Frontend** |     Vanilla JS + CSS     | 9 JS files, 13 stylesheets, dark mode |
+|   🔐 **Auth**   |  OAuth2 + JWT sessions   | Google, Facebook, Email/Password      |
+|  📧 **Email**   |      PHPMailer 7.0       | SMTP with TLS                         |
+|  🔒 **Crypto**  |   OpenSSL AES-256-CBC    | End-to-end encrypted messages         |
+
+</div>
+
+---
+
+## ✦ Core Features
+
+<div align="center">
 
 ```
-muffeia/
-├── 📄 index.php                    # Main dashboard (authenticated users)
-├── 📄 landing.php                  # Public landing page
-├── 📄 post_problem.php             # Problem submission
-├── 📄 submit_solution.php          # Solution submission
-│
-├── 📁 api/                         # AJAX Endpoints (20+ files)
-│   ├── load_posts.php              # Paginated posts
-│   ├── load_messages.php           # Message fetching
-│   ├── post_message.php            # Send encrypted message
-│   ├── bookmark_post.php           # Save posts
-│   ├── report_post.php             # Flag content
-│   └── ... (15+ more endpoints)
-│
-├── 📁 auth/                        # Authentication (6 files)
-│   ├── login.php                   # Login interface
-│   ├── api.php                     # OAuth & login endpoint
-│   ├── logout.php                  # Logout
-│   └── forgot_password.php         # Password reset
-│
-├── 📁 pages/                       # Page Views (17 files)
-│   ├── admin_dashboard.php         # Admin panel
-│   ├── view_problem.php            # Problem detail
-│   ├── profile.php                 # User profile
-│   ├── message.php                 # Direct messaging
-│   └── ... (13+ more pages)
-│
-├── 📁 includes/                    # Core Libraries (18 files)
-│   ├── config.php                  # Database credentials ⚠️ (ignored)
-│   ├── db.php                      # Connection & init
-│   ├── moderation.php              # Content filtering
-│   ├── encryption.php              # AES-256-CBC
-│   ├── reputation.php              # Points & badges
-│   └── ... (13+ more libraries)
-│
-├── 📁 js/                          # JavaScript (9 files)
-│   ├── scripts.js                  # Main logic
-│   ├── notifications.js            # Real-time updates
-│   └── ... (7+ more scripts)
-│
-├── 📁 css/                         # Stylesheets (13 files)
-│   ├── muffeia-ui.css              # Main styles
-│   ├── responsive.css              # Mobile styles
-│   └── ... (11+ more stylesheets)
-│
-├── 📁 community/                   # Static Pages (5 files)
-│   ├── about.php
-│   ├── guidelines.php
-│   ├── privacy.php
-│   └── contact.php
-│
-├── 📁 uploads/                     # User-Generated Files
-├── 📁 vendor/                      # Composer Dependencies
-│
-├── .gitignore                      # Sensitive files to ignore
-├── .htaccess                       # Apache configuration
-├── robots.txt                      # SEO configuration
-├── composer.json                   # PHP dependencies
-└── composer.lock                   # Locked versions
+┌─────────────────────────────────────────────────────────────┐
+│                                                             │
+│   👤 USER         📝 CONTENT        💬 COMMUNITY           │
+│  ─────────       ──────────        ───────────             │
+│  OAuth Login     Post Problems     Encrypted DMs           │
+│  Email Verify    Submit Solutions  Group Chatrooms         │
+│  Profiles        Accept Answer     Real-time Notifs        │
+│  Online Status   Bookmarks         Leaderboard             │
+│  Account Mgmt    View Analytics    Reputation Badges       │
+│                                                             │
+│   🔍 DISCOVERY    🛡️ MODERATION     🔒 SECURITY            │
+│  ──────────      ────────────      ──────────             │
+│  Full-text Search 1360+ Terms      bcrypt Passwords        │
+│  Category Browse  Obfuscation Det. CSRF Tokens             │
+│  Trending Tags    Report System    SQL Prepared Stmts      │
+│  Advanced Filters Spam Detection   XSS Escaping            │
+│  SEO Sitemap      Admin Dashboard  Rate Limit 120/min      │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
 ```
 
-**Statistics:**
-- Total PHP files: 299
-- JavaScript files: 9
-- CSS files: 13
-- Total project size: 19MB
+</div>
 
 ---
 
-## 🚀 Installation Guide
+## ✦ Project Structure
+
+```
+muffeia/                          📦 19MB  |  299 PHP  |  9 JS  |  13 CSS
+│
+├── 📄 index.php                  ← Main dashboard (authenticated)
+├── 📄 landing.php                ← Public landing page
+├── 📄 post_problem.php           ← Problem submission
+├── 📄 submit_solution.php        ← Solution submission
+│
+├── 📁 api/          (20+ files)  ← AJAX endpoints (JSON responses)
+│   ├── load_posts.php            ← Paginated posts
+│   ├── post_message.php          ← Send encrypted message
+│   ├── bookmark_post.php         ← Save posts
+│   └── ...15+ more
+│
+├── 📁 auth/         (6 files)    ← OAuth + session management
+├── 📁 pages/        (17 files)   ← Page views
+├── 📁 includes/     (18 files)   ← Core libraries
+│   ├── config.php                ← ⚠️ .gitignored — never commit
+│   ├── moderation.php            ← Content filtering
+│   ├── encryption.php            ← AES-256-CBC
+│   └── reputation.php            ← Points & badges
+│
+├── 📁 js/  📁 css/               ← Frontend assets
+├── 📁 community/                 ← Static pages (about, privacy…)
+└── 📁 vendor/                    ← Composer dependencies
+```
+
+---
+
+## ✦ Installation
 
 ### Prerequisites
 
-Before you begin, ensure you have:
+<div align="center">
 
-- **PHP 7.0+** with these extensions:
-  - `mysqli` (MySQL connection)
-  - `openssl` (encryption)
-  - `json` (data handling)
-  - `spl` (libraries)
-- **MySQL 5.7+** or **MariaDB 10.2+**
-- **Apache** with `mod_rewrite` enabled
-- **Composer** (for dependency management)
-- **Git** (for version control)
+![PHP](https://img.shields.io/badge/PHP-≥7.0-777BB4?logo=php&logoColor=white&style=flat-square)
+![MySQL](https://img.shields.io/badge/MySQL-≥5.7-4479A1?logo=mysql&logoColor=white&style=flat-square)
+![Apache](https://img.shields.io/badge/Apache-mod__rewrite-D22128?logo=apache&logoColor=white&style=flat-square)
+![Composer](https://img.shields.io/badge/Composer-required-885630?logo=composer&logoColor=white&style=flat-square)
 
-### Step 1: Clone the Repository
+</div>
 
 ```bash
-git clone https://github.com/yourusername/muffeia.git
-cd muffeia
-```
+# 1. Clone
+git clone https://github.com/yourusername/muffeia.git && cd muffeia
 
-### Step 2: Install Dependencies
-
-```bash
+# 2. Install PHP dependencies
 composer install
-```
 
-This will install:
-- `phpmailer/phpmailer` - Email functionality
-- `league/oauth2-facebook` - Facebook authentication
-- `league/oauth2-google` - Google authentication
-
-### Step 3: Environment Configuration
-
-**Create a `.env` file** (never commit this):
-
-```bash
+# 3. Copy env template and fill in your credentials
 cp .env.example .env
+
+# 4. Run database migrations
+php -S localhost:8000
+# → visit http://localhost:8000/migrate.php
+
+# 5. Set your account as admin
+mysql -u root -p muffeia -e \
+  "UPDATE users SET is_admin=TRUE WHERE email='you@example.com';"
 ```
 
-**Edit `.env` with your credentials:**
+### Environment Variables
 
 ```env
-# Database Configuration
-DB_HOST=your_db_host
-DB_USER=your_db_user
-DB_PASS=your_db_password
-DB_NAME=your_db_name
-
-# Application Settings
-APP_URL=http://localhost:8000
-APP_TIMEZONE=Asia/Manila
-APP_ENV=development
-
-# Email Configuration (SMTP)
-MAIL_HOST=smtp.gmail.com
-MAIL_PORT=587
-MAIL_USER=your_email@gmail.com
-MAIL_PASS=your_app_password
-
-# OAuth Credentials
-GOOGLE_CLIENT_ID=your_google_client_id
-GOOGLE_CLIENT_SECRET=your_google_client_secret
-FACEBOOK_CLIENT_ID=your_facebook_app_id
-FACEBOOK_CLIENT_SECRET=your_facebook_app_secret
-```
-
-> ⚠️ **Important**: Never commit `.env` file. It's included in `.gitignore`.
-
-### Step 4: Set Up Database
-
-**Option A: Using Migration Script (Recommended)**
-
-```bash
-# Start local server
-php -S localhost:8000
-
-# Visit in browser
-http://localhost:8000/migrate.php
-```
-
-**Option B: Manual SQL Import**
-
-```bash
-mysql -h your_host -u your_user -p your_database < database/schema.sql
-```
-
-### Step 5: Configure Admin User
-
-```sql
--- Set existing user as admin
-UPDATE users SET is_admin = TRUE 
-WHERE email = 'your_email@example.com';
-```
-
-### Step 6: Start Development Server
-
-```bash
-php -S localhost:8000
-```
-
-Visit `http://localhost:8000` in your browser.
-
-### Step 7: Verify Installation
-
-- [ ] Home page loads (landing.php for guests)
-- [ ] Registration works
-- [ ] Email verification sends
-- [ ] Login succeeds
-- [ ] Can post problems
-- [ ] Can submit solutions
-- [ ] Dark mode toggle works
-- [ ] Admin dashboard accessible
-
----
-
-## ⚙️ Configuration
-
-### Database Configuration
-
-Edit `.env` file:
-
-```env
+# ── Database ──────────────────────────────
 DB_HOST=localhost
 DB_USER=root
 DB_PASS=your_secure_password
 DB_NAME=muffeia
-```
 
-### Email Configuration
+# ── Application ───────────────────────────
+APP_URL=http://localhost:8000
+APP_TIMEZONE=Asia/Manila
+APP_ENV=development
 
-Configure SMTP in `.env`:
-
-```env
+# ── Email (SMTP) ──────────────────────────
 MAIL_HOST=smtp.gmail.com
 MAIL_PORT=587
-MAIL_USER=your_email@gmail.com
+MAIL_USER=your@gmail.com
 MAIL_PASS=your_app_password
+
+# ── OAuth ─────────────────────────────────
+GOOGLE_CLIENT_ID=xxxxx.apps.googleusercontent.com
+GOOGLE_CLIENT_SECRET=xxxxx
+FACEBOOK_CLIENT_ID=xxxxx
+FACEBOOK_CLIENT_SECRET=xxxxx
 ```
 
-### OAuth Configuration
-
-Set up credentials in `.env`:
-
-```env
-GOOGLE_CLIENT_ID=your_client_id.apps.googleusercontent.com
-GOOGLE_CLIENT_SECRET=your_client_secret
-FACEBOOK_CLIENT_ID=your_facebook_app_id
-FACEBOOK_CLIENT_SECRET=your_facebook_app_secret
-```
-
-### Rate Limiting
-
-Adjust in `includes/rate_limiter.php`:
-
-```php
-define('RATE_LIMIT_REQUESTS', 120);     // Requests
-define('RATE_LIMIT_WINDOW', 60);        // Time window (seconds)
-```
+> [!WARNING]
+> **Never commit `.env` or `includes/config.php`** — both are in `.gitignore`. These contain credentials and encryption keys.
 
 ---
 
-## 📖 Usage
+## ✦ API Reference
 
-### For Users
+All endpoints accept **POST** with a valid `csrf_token` and return **JSON**.
 
-#### Creating an Account
+<details>
+<summary><b>📮 Posts</b></summary>
 
-1. Visit the landing page
-2. Click "Sign Up"
-3. Choose authentication method:
-   - Email & Password (verify email)
-   - Google OAuth
-   - Facebook OAuth
-4. Complete your profile
+| Endpoint                        | Purpose             |
+| ------------------------------- | ------------------- |
+| `POST /api/load_posts.php`      | Paginated post feed |
+| `POST /api/bookmark_post.php`   | Toggle bookmark     |
+| `POST /api/report_post.php`     | Flag content        |
+| `POST /api/delete_post.php`     | Delete problem      |
+| `POST /api/accept_solution.php` | Mark best solution  |
 
-#### Posting a Problem
-
-1. Click "Post a Problem"
-2. Fill in:
-   - **Title**: Clear, descriptive heading
-   - **Description**: Detailed explanation
-   - **Category**: Select relevant category
-   - **Tags**: Add 1-5 tags
-3. Click "Submit"
-
-#### Finding Solutions
-
-1. Browse categories or use search
-2. Click on a problem to view details
-3. Read solutions from community members
-4. Accept the best solution (if problem owner)
-5. Bookmark for later reference
-
-#### Direct Messaging
-
-1. Visit a user's profile
-2. Click "Message"
-3. Send encrypted message
-4. All messages are end-to-end encrypted
-
-### For Administrators
-
-#### Access Admin Dashboard
-
-1. Log in with admin account
-2. Navigate to `/pages/admin_dashboard.php`
-
-#### Moderate Content
-
-- Review reported posts
-- Remove inappropriate content
-- Suspend/ban users if needed
-- Manage categories and tags
-
----
-
-## 🔌 API Endpoints
-
-All API endpoints use **POST** requests with **CSRF tokens** and return **JSON**.
-
-### Authentication
-
-| Endpoint | Purpose |
-|----------|---------|
-| `POST /auth/api.php` | Login/OAuth handler |
-| `POST /auth/logout.php` | Logout user |
-| `POST /auth/forgot_password.php` | Request password reset |
-| `POST /auth/reset_password.php` | Reset password with token |
-
-### Posts
-
-| Endpoint | Purpose |
-|----------|---------|
-| `POST /api/load_posts.php` | Fetch paginated posts |
-| `POST /api/check_new_posts.php` | Check for new content |
-| `POST /api/bookmark_post.php` | Toggle bookmark |
-| `POST /api/report_post.php` | Report inappropriate content |
-| `POST /api/delete_post.php` | Delete problem |
-| `POST /api/accept_solution.php` | Mark best solution |
-
-### Messaging
-
-| Endpoint | Purpose |
-|----------|---------|
-| `POST /api/load_messages.php` | Fetch conversation |
-| `POST /api/post_message.php` | Send encrypted message |
-| `POST /api/delete_message.php` | Delete message |
-| `POST /api/get_message_count.php` | Unread count |
-
-### Notifications
-
-| Endpoint | Purpose |
-|----------|---------|
-| `POST /api/check_notifications.php` | Fetch notifications |
-| `POST /api/get_notification_count.php` | Unread count |
-| `POST /api/delete_notification.php` | Mark as read |
-| `POST /api/clear_all_notifications.php` | Clear all |
-
-### Users
-
-| Endpoint | Purpose |
-|----------|---------|
-| `POST /api/update_online_status.php` | Set presence |
-| `POST /api/delete_user.php` | Delete account |
-| `POST /api/schedule_account_deletion.php` | Request deletion |
-
-### Example API Call
-
-**Fetch Posts:**
-```javascript
-fetch('/api/load_posts.php', {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
+```js
+// Example: fetch paginated posts
+const res = await fetch("/api/load_posts.php", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
   body: JSON.stringify({
     csrf_token: document.querySelector('[name="csrf_token"]').value,
     page: 1,
-    category: 'technology'
-  })
-})
-.then(r => r.json())
-.then(data => console.log(data));
+    category: "technology",
+  }),
+});
+const { posts, total } = await res.json();
 ```
+
+</details>
+
+<details>
+<summary><b>💬 Messaging</b></summary>
+
+| Endpoint                          | Purpose                |
+| --------------------------------- | ---------------------- |
+| `POST /api/load_messages.php`     | Fetch conversation     |
+| `POST /api/post_message.php`      | Send encrypted message |
+| `POST /api/delete_message.php`    | Delete message         |
+| `POST /api/get_message_count.php` | Unread count           |
+
+</details>
+
+<details>
+<summary><b>🔔 Notifications</b></summary>
+
+| Endpoint                                | Purpose             |
+| --------------------------------------- | ------------------- |
+| `POST /api/check_notifications.php`     | Fetch notifications |
+| `POST /api/get_notification_count.php`  | Unread count        |
+| `POST /api/clear_all_notifications.php` | Clear all           |
+
+</details>
+
+<details>
+<summary><b>👤 Users & Auth</b></summary>
+
+| Endpoint                             | Purpose               |
+| ------------------------------------ | --------------------- |
+| `POST /auth/api.php`                 | Login / OAuth handler |
+| `POST /auth/logout.php`              | Logout                |
+| `POST /auth/forgot_password.php`     | Request reset         |
+| `POST /api/update_online_status.php` | Set presence          |
+| `POST /api/delete_user.php`          | Delete account        |
+
+</details>
 
 ---
 
-## 🔐 Security
+## ✦ Security Architecture
 
-<p align="center">
-  <img src="./assets/muffeia_security_layers.svg" alt="Muffeia Security Architecture - 5 security layers" width="100%" style="max-width: 680px;">
-</p>
+<div align="center">
 
-### Security Best Practices
-
-#### 1. **Environment Variables**
-
-Never hardcode sensitive data. Use `.env` file:
-
-```bash
-# .env (NEVER commit)
-DB_HOST=localhost
-DB_USER=root
-DB_PASS=secure_password
+```
+        ┌──────────────────────────────────────────┐
+        │              REQUEST LIFECYCLE            │
+        └──────────────────────────────────────────┘
+                           │
+              ┌────────────▼────────────┐
+              │   🚦 Rate Limiter       │  120 req/min per IP
+              └────────────┬────────────┘
+                           │
+              ┌────────────▼────────────┐
+              │   🛡️ CSRF Validation    │  bin2hex(random_bytes(32))
+              └────────────┬────────────┘
+                           │
+              ┌────────────▼────────────┐
+              │   🔐 Auth Check         │  bcrypt · OAuth2 · Sessions
+              └────────────┬────────────┘
+                           │
+              ┌────────────▼────────────┐
+              │   🧹 Input Sanitization │  XSS escape · SQL prep stmts
+              └────────────┬────────────┘
+                           │
+              ┌────────────▼────────────┐
+              │   🤬 Content Moderation │  1360+ terms · obfusc. detect
+              └────────────┬────────────┘
+                           │
+              ┌────────────▼────────────┐
+              │   💾 Database / Storage │  Encrypted DMs · Hashed PW
+              └─────────────────────────┘
 ```
 
-#### 2. **Password Security**
+</div>
 
-```php
-// Hash passwords with bcrypt
-$hashed = password_hash($password, PASSWORD_DEFAULT);
-
-// Verify password
-if (password_verify($input, $hashed)) { /* Login */ }
-```
-
-#### 3. **SQL Injection Prevention**
-
-```php
-// ✅ GOOD: Prepared statement
-$stmt = $conn->prepare("SELECT * FROM users WHERE email = ?");
-$stmt->bind_param("s", $email);
-$stmt->execute();
-
-// ❌ BAD: Never do this
-$query = "SELECT * FROM users WHERE email = '" . $email . "'";
-```
-
-#### 4. **XSS Protection**
-
-```php
-// ✅ GOOD: HTML escaping
-echo htmlspecialchars($user_input, ENT_QUOTES, 'UTF-8');
-
-// ❌ BAD: Unescaped output
-echo $user_input;
-```
-
-#### 5. **CSRF Protection**
-
-```php
-// Generate token
-$token = bin2hex(random_bytes(32));
-$_SESSION['csrf_token'] = $token;
-
-// Validate on submit
-if ($_POST['csrf_token'] !== $_SESSION['csrf_token']) {
-    die('CSRF token invalid');
-}
-```
-
-#### 6. **Message Encryption**
-
-```php
-// Encrypt with AES-256-CBC
-$encrypted = openssl_encrypt($message, 'AES-256-CBC', $key, 0, $iv);
-
-// Decrypt
-$decrypted = openssl_decrypt($encrypted, 'AES-256-CBC', $key, 0, $iv);
-```
-
-#### 7. **Rate Limiting**
-
-```php
-// Check limit
-if (isRateLimited($ip)) {
-    http_response_code(429);
-    die('Too many requests');
-}
-
-// Track request
-recordRequest($ip);
-```
-
-#### 8. **Content Moderation**
-
-```php
-// Automatic filtering
-if (containsModeratedContent($text)) {
-    $text = maskProfanity($text);  // Mask as **
-}
-```
-
-### Security Checklist
-
-- [ ] `.env` file created and added to `.gitignore`
-- [ ] All database credentials in `.env` (not in code)
-- [ ] `includes/config.php` added to `.gitignore`
-- [ ] HTTPS enabled in production
-- [ ] HTTPS redirect in `.htaccess`
-- [ ] OAuth credentials stored in `.env`
-- [ ] SMTP password stored in `.env`
-- [ ] File permissions: `chmod 600` for config files
-- [ ] Regular backups implemented
-- [ ] SQL backups encrypted and stored securely
-- [ ] Error logging to file (not displayed to users)
-- [ ] Update PHP and MySQL regularly
+| Threat            | Mitigation                                    |
+| ----------------- | --------------------------------------------- |
+| SQL Injection     | Prepared statements everywhere                |
+| XSS               | `htmlspecialchars()` on all output            |
+| CSRF              | Per-session token on every form               |
+| Brute Force       | Rate limiting (429 after threshold)           |
+| Password Leak     | bcrypt with `PASSWORD_DEFAULT`                |
+| Message Intercept | AES-256-CBC end-to-end encryption             |
+| Spam / Abuse      | 1360+ term moderation + obfuscation detection |
 
 ---
 
-## 🌍 Deployment
+## ✦ Deployment
 
-### Hosting Options
+<details>
+<summary><b>🐳 Docker (Recommended)</b></summary>
 
-#### Option 1: Shared Hosting (e.g., InfinityFree, Bluehost)
-
-1. **Upload files via FTP/SFTP**
-   ```bash
-   sftp user@host.com
-   put -r muffeia/* /public_html/
-   ```
-
-2. **Create database via control panel**
-   - cPanel or Plesk
-   - Run migrations
-
-3. **Configure `.env` for production**
-   - Set production database credentials
-   - Set production SMTP credentials
-
-4. **Enable HTTPS**
-   - Use Let's Encrypt (free)
-
-### Option 2: VPS (e.g., DigitalOcean, Linode)
-
-1. **Install LEMP Stack**
-   ```bash
-   sudo apt update
-   sudo apt install php php-cli php-fpm php-mysql nginx mysql-server
-   ```
-
-2. **Clone repository**
-   ```bash
-   git clone https://github.com/yourusername/muffeia.git
-   cd muffeia
-   composer install
-   ```
-
-3. **Set SSL with Certbot**
-   ```bash
-   sudo apt install certbot python3-certbot-nginx
-   sudo certbot --nginx -d muffeia.com
-   ```
-
-### Option 3: Docker
-
-**Dockerfile:**
-```dockerfile
-FROM php:7.4-apache
-RUN docker-php-ext-install mysqli pdo pdo_mysql
-RUN a2enmod rewrite
-COPY . /var/www/html/
-```
-
-**docker-compose.yml:**
 ```yaml
-version: '3'
+# docker-compose.yml
+version: "3"
 services:
   web:
     build: .
-    ports:
-      - "80:80"
+    ports: ["80:80"]
+    env_file: .env
   db:
     image: mysql:5.7
     environment:
       MYSQL_DATABASE: muffeia
-      MYSQL_ROOT_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: ${DB_PASS}
+    volumes:
+      - db_data:/var/lib/mysql
+volumes:
+  db_data:
 ```
 
-### Pre-Deployment Checklist
+```bash
+docker-compose up -d
+```
 
-- [ ] All environment variables in `.env`
-- [ ] Database backed up
-- [ ] HTTPS certificate installed
-- [ ] `.htaccess` configured for production
-- [ ] Error logs set to private location
-- [ ] Admin account created
-- [ ] Email testing successful
-- [ ] OAuth apps configured
-- [ ] Rate limiting configured
-- [ ] Backup schedule set up
-- [ ] Monitoring enabled
-- [ ] Performance optimized
+</details>
 
----
+<details>
+<summary><b>🖥️ VPS (DigitalOcean / Linode)</b></summary>
 
-## 👥 Contributing
+```bash
+sudo apt update && sudo apt install php php-fpm php-mysql nginx mysql-server -y
+git clone https://github.com/yourusername/muffeia.git /var/www/muffeia
+cd /var/www/muffeia && composer install
+sudo certbot --nginx -d muffeia.com   # Free SSL
+```
 
-We welcome contributions! Here's how to get started.
+</details>
 
-### Code of Conduct
+<details>
+<summary><b>📦 Shared Hosting (cPanel / InfinityFree)</b></summary>
 
-- Be respectful and inclusive
-- Report issues responsibly
-- Follow the project's code style
-- Write clear commit messages
+1. Upload files via FTP/SFTP to `public_html/`
+2. Create MySQL database via cPanel
+3. Import `database/schema.sql`
+4. Set `.env` with production credentials
+5. Enable HTTPS via Let's Encrypt in cPanel
 
-### Development Workflow
+</details>
 
-1. **Fork the repository**
-   ```bash
-   git clone https://github.com/yourusername/muffeia.git
-   ```
-
-2. **Create a feature branch**
-   ```bash
-   git checkout -b feature/amazing-feature
-   ```
-
-3. **Make your changes**
-   - Write clean, documented code
-   - Follow PSR-12 PHP coding standards
-   - Add comments for complex logic
-
-4. **Test your changes**
-   - Test in browser
-   - Test across devices (mobile, tablet, desktop)
-   - Test in light and dark mode
-
-5. **Commit and push**
-   ```bash
-   git add .
-   git commit -m "Add amazing feature"
-   git push origin feature/amazing-feature
-   ```
-
-6. **Open a Pull Request**
-   - Describe changes clearly
-   - Link related issues
-   - Wait for review
-
-### Reporting Bugs
-
-Open an issue with:
-- Clear title
-- Detailed description
-- Steps to reproduce
-- Expected vs actual behavior
-- Screenshots if applicable
-- Your environment (OS, browser, PHP version)
-
-### Suggesting Features
-
-Describe:
-- Use case
-- Expected behavior
-- Mockups or wireframes
-- Potential implementation approach
+> [!TIP]
+> Run through the **pre-launch checklist**: `.env` in place → HTTPS cert → OAuth apps pointed to prod domain → test email delivery → confirm admin access → enable error logging to file.
 
 ---
 
-## 📄 License
+## ✦ Contributing
 
-This project is licensed under the **MIT License** - see [LICENSE](LICENSE) file for details.
+```bash
+# Fork → Clone → Branch → Build → PR
+git checkout -b feature/your-feature-name
+# write clean, PSR-12 compliant PHP
+git commit -m "feat: describe your change clearly"
+git push origin feature/your-feature-name
+```
 
----
-
-## 💬 Support
-
-### Getting Help
-
-- **Documentation**: See [DOCUMENTATION_INDEX.txt](DOCUMENTATION_INDEX.txt)
-- **FAQ**: Check existing GitHub issues
-- **Email**: support@muffeia.com
-
-### Resources
-
-- [PHP Documentation](https://www.php.net/docs.php)
-- [MySQL Documentation](https://dev.mysql.com/doc/)
-- [OAuth2 Guide](https://oauth.net/2/)
-- [OWASP Security](https://owasp.org/)
-
-### Community
-
-- GitHub Issues for bug reports
-- GitHub Discussions for questions
-- Contributing guidelines above
+- Follow **PSR-12** PHP coding standards
+- Test on mobile + desktop, light + dark mode
+- Open a PR with a clear description and linked issue
 
 ---
 
-## 🎉 Built with ❤️ by the Muffeia Community
+## ✦ License & Support
 
-© 2026 Muffeia. Making communities safer, one problem at a time.
+<div align="center">
+
+![License](https://img.shields.io/badge/License-MIT-f59e0b?style=for-the-badge)
+[![Email](https://img.shields.io/badge/Support-support%40muffeia.com-8b5cf6?style=for-the-badge&logo=gmail&logoColor=white)](mailto:support@muffeia.com)
+
+</div>
+
+- 📖 **Docs**: `DOCUMENTATION_INDEX.txt`
+- 🐛 **Bugs**: [GitHub Issues](https://github.com/yourusername/muffeia/issues)
+- 💬 **Questions**: [GitHub Discussions](https://github.com/yourusername/muffeia/discussions)
+- 📚 **Resources**: [PHP Docs](https://www.php.net/docs.php) · [OWASP](https://owasp.org/) · [OAuth2](https://oauth.net/2/)
 
 ---
 
-**Last Updated**: June 1, 2026  
-**Version**: 3.0  
-**Status**: Production Ready ✅
+<div align="center">
+
+<!-- ANIMATED FOOTER WAVE -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:24243e,50:302b63,100:0f0c29&height=120&section=footer&animation=fadeIn" width="100%"/>
+
+**Built with ❤️ by the Muffeia Community**
+
+_Making communities safer, one problem at a time._
+
+![Visitors](https://visitor-badge.laobi.icu/badge?page_id=yourusername.muffeia&style=flat-square&color=blueviolet)
+&nbsp;
+![Last Commit](https://img.shields.io/github/last-commit/yourusername/muffeia?style=flat-square&color=302b63&label=last+commit)
+&nbsp;
+**v3.0 · June 2026**
+
+</div>
