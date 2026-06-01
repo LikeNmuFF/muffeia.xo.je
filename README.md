@@ -432,7 +432,7 @@ _Making communities safer, one problem at a time._
 
 ![Visitors](https://visitor-badge.laobi.icu/badge?page_id=yourusername.muffeia&style=flat-square&color=blueviolet)
 &nbsp;
-![Last Commit](https://img.shields.io/github/last-commit/LikeNmuFF/muffeia?style=flat-square&color=302b63&label=last+commit)
+![Last Commit](https://img.shields.io/github/last-commit/LikeNmuFF/muffeia.xo.je?style=flat-square&color=302b63&label=last+commit)
 &nbsp;
 **v3.0 · June 2026**
 
