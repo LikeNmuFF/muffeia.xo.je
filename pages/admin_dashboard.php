@@ -539,12 +539,14 @@ $reported_users = $conn->query("
                                     <form method="POST" style="margin: 0;" onsubmit="return confirm('Ban this user?');">
                                         <input type="hidden" name="action" value="ban_user">
                                         <input type="hidden" name="user_id" value="<?php echo $user['id']; ?>">
+                                        <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
                                         <button type="submit" class="btn btn-warning" style="font-size: 12px;">Ban</button>
                                     </form>
                                     <?php if ($user['id'] !== $_SESSION['user_id']): ?>
                                     <form method="POST" style="margin: 0;" onsubmit="return confirm('Delete this user? This cannot be undone.');">
                                         <input type="hidden" name="action" value="delete_user">
                                         <input type="hidden" name="user_id" value="<?php echo $user['id']; ?>">
+                                        <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
                                         <button type="submit" class="btn btn-danger" style="font-size: 12px;">Delete</button>
                                     </form>
                                     <?php endif; ?>
@@ -587,17 +589,20 @@ $reported_users = $conn->query("
                                     <form method="POST" style="margin: 0;">
                                         <input type="hidden" name="action" value="approve_mod">
                                         <input type="hidden" name="mod_id" value="<?php echo $post['id']; ?>">
+                                        <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
                                         <button type="submit" class="btn btn-success" style="font-size: 12px;">Approve</button>
                                     </form>
                                     <form method="POST" style="margin: 0;">
                                         <input type="hidden" name="action" value="reject_mod">
                                         <input type="hidden" name="mod_id" value="<?php echo $post['id']; ?>">
+                                        <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
                                         <button type="submit" class="btn btn-danger" style="font-size: 12px;">Reject</button>
                                     </form>
                                     <?php if ($post['content_id']): ?>
                                     <form method="POST" style="margin: 0;" onsubmit="return confirm('Delete this post?');">
                                         <input type="hidden" name="action" value="delete_post">
                                         <input type="hidden" name="post_id" value="<?php echo $post['content_id']; ?>">
+                                        <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
                                         <button type="submit" class="btn btn-danger" style="font-size: 12px;">Delete</button>
                                     </form>
                                     <?php endif; ?>
@@ -643,5 +648,6 @@ $reported_users = $conn->query("
         </div>
         
     </div>
+<?php if (!empty($_SESSION["is_admin"])): ?><script src="/js/admin-notifications.js"></script><?php endif; ?>
 </body>
 </html>

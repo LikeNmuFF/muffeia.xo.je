@@ -629,5 +629,6 @@ $mark_read_stmt->close();
             updateNotificationCount();
         });
     </script>
+<?php if (!empty($_SESSION["is_admin"])): ?><script src="/js/admin-notifications.js"></script><?php endif; ?>
 </body>
 </html>

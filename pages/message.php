@@ -1613,5 +1613,6 @@ function handleImageError(img) {
         });
     });
     </script>
+<?php if (!empty($_SESSION["is_admin"])): ?><script src="/js/admin-notifications.js"></script><?php endif; ?>
 </body>
 </html>

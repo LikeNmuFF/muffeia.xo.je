@@ -901,5 +901,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
+<?php if (!empty($_SESSION["is_admin"])): ?><script src="/js/admin-notifications.js"></script><?php endif; ?>
 </body>
 </html>

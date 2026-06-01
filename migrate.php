@@ -144,5 +144,6 @@ if (!($is_first_setup || $is_localhost || $is_admin)) {
         <p><a href="index.php" style="padding: 10px 20px; background: #28a745; color: white; text-decoration: none; border-radius: 3px;">← Back to Dashboard</a></p>
     </div>
     
+<?php if (!empty($_SESSION["is_admin"])): ?><script src="/js/admin-notifications.js"></script><?php endif; ?>
 </body>
 </html>

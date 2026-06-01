@@ -77,6 +77,28 @@ function processTagsFromString($conn, $tag_string) {
 }
 
 /**
+ * Extract #tags from description text
+ */
+function extractTagsFromText($text) {
+    preg_match_all('/(?:^|\s)#(\w+)/u', $text, $matches);
+    if (empty($matches[1])) return [];
+    $tags = array_filter($matches[1], function($tag) {
+        return strlen($tag) >= 2 && !preg_match('/^\d+$/', $tag);
+    });
+    return array_values(array_unique($tags));
+}
+
+/**
+ * Extract ##Category from description text
+ */
+function extractCategoryFromText($text) {
+    if (preg_match('/##([\w\s]+?)(?=\s*#|$)/u', $text, $matches)) {
+        return trim($matches[1]);
+    }
+    return null;
+}
+
+/**
  * Get tags for a specific problem
  */
 function getProblemTags($conn, $problem_id) {

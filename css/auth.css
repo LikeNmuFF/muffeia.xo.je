@@ -680,22 +680,22 @@ select.form-input {
     appearance: none !important;
     -webkit-appearance: none !important;
     -moz-appearance: none !important;
-    background: rgba(255, 255, 255, 0.05) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23cbd5e1' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") no-repeat right 16px center / 16px !important;
+    background: var(--clr-surface-theme) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") no-repeat right 16px center / 16px !important;
     padding-right: 45px !important;
     cursor: pointer !important;
 }
 
 select.form-input:focus {
     outline: none !important;
-    border-color: var(--primary) !important;
-    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1) !important;
-    background-color: rgba(255, 255, 255, 0.08) !important;
+    border-color: var(--clr-primary) !important;
+    box-shadow: 0 0 0 3px rgba(212, 74, 108, 0.12) !important;
+    background-color: var(--clr-surface-theme) !important;
 }
 
 /* Dropdown options styling */
 select.form-input option {
-    background: var(--darker) !important;
-    color: var(--light) !important;
+    background: var(--clr-surface-theme) !important;
+    color: var(--clr-text-theme) !important;
     padding: 12px 16px !important;
     border: none !important;
     font-size: 1rem !important;
@@ -710,12 +710,11 @@ select.form-input option:checked {
 
 /* Placeholder styling */
 select.form-input:invalid {
-    color: #94a3b8 !important;
+    color: var(--clr-text-secondary-theme) !important;
 }
 
 select.form-input option[value=""] {
-    color: #94a3b8 !important;
-    font-style: italic !important;
+    color: var(--clr-text-theme) !important;
 }
 
 .form-input:focus {

@@ -134,5 +134,6 @@
             return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
         }
     </script>
+<?php if (!empty($_SESSION["is_admin"])): ?><script src="/js/admin-notifications.js"></script><?php endif; ?>
 </body>
 </html>

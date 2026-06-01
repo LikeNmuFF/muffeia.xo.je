@@ -27,14 +27,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $title = trim($_POST['title']);
     $description = trim($_POST['description']);
     $anonymous = isset($_POST['anonymous']) ? 1 : 0;
-    $category_id = ($category_feature_available && !empty($_POST['category_id'])) ? intval($_POST['category_id']) : null;
-    $tags_raw = $category_feature_available ? trim($_POST['tags'] ?? '') : '';
     $user_id = $_SESSION['user_id']; 
 
-    if ($category_id !== null && !getCategoryById($conn, $category_id)) {
-        $_SESSION['post_error'] = 'Please choose a valid category.';
-        header("Location: index.php");
-        exit();
+    if ($category_feature_available) {
+        $detected_tags = extractTagsFromText($description);
+        $detected_category = extractCategoryFromText($description);
+
+        $category_id = null;
+        if ($detected_category) {
+            $cat_stmt = $conn->prepare("SELECT id FROM categories WHERE name = ?");
+            $cat_stmt->bind_param("s", $detected_category);
+            $cat_stmt->execute();
+            $cat_result = $cat_stmt->get_result()->fetch_assoc();
+            $cat_stmt->close();
+            if ($cat_result) {
+                $category_id = $cat_result['id'];
+            }
+        }
+    } else {
+        $category_id = null;
+        $detected_tags = [];
     }
     
     $title_mod = moderate_text($title);
@@ -75,8 +87,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($stmt->execute()) {
         $problem_id = $stmt->insert_id;
 
-        if ($tags_raw !== '') {
-            $tag_ids = processTagsFromString($conn, $tags_raw);
+        if ($category_feature_available && !empty($detected_tags)) {
+            $tag_ids = processTagsFromString($conn, implode(',', $detected_tags));
             linkTagsToProblem($conn, $problem_id, $tag_ids);
         }
 

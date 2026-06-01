@@ -321,5 +321,6 @@ if (!$tag_id) {
             <?php endif; ?>
         <?php endif; ?>
     </div>
+<?php if (!empty($_SESSION["is_admin"])): ?><script src="/js/admin-notifications.js"></script><?php endif; ?>
 </body>
 </html>

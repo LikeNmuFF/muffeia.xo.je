@@ -1,6 +1,7 @@
 <?php
 // header.php
 include 'db.php';
+require_once 'moderation.php';
 session_start();
 $success = '';
 $error = '';
@@ -23,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['action'])) {
         $error = 'Security token validation failed. Please try again.';
     } else {
         if ($_POST['action'] == 'login') {
-            $stmt = $conn->prepare("SELECT id, username, password_hash FROM users WHERE email = ?");
+            $stmt = $conn->prepare("SELECT id, username, password_hash, is_admin FROM users WHERE email = ?");
             $stmt->bind_param("s", $_POST['email']);
             $stmt->execute();
             $result = $stmt->get_result();
@@ -34,6 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['action'])) {
                     session_regenerate_id(true);
                     $_SESSION['user_id'] = $user['id'];
                     $_SESSION['username'] = $user['username'];
+                    $_SESSION['is_admin'] = (int)$user['is_admin'];
                     header("Location: ../index.php");
                     exit();
                 }
@@ -74,6 +76,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['action'])) {
                     $error = 'Username must be at least 3 characters long.';
                 } elseif (!preg_match('/^[a-zA-Z0-9_]+$/', $username)) {
                     $error = 'Username can only contain letters, numbers, and underscores.';
+                } elseif (moderate_text($username)['flagged']) {
+                    $error = 'Username contains inappropriate language.';
                 } else {
                     // Check for existing user
                     $stmt_check = $conn->prepare("SELECT id FROM users WHERE email = ? OR username = ?");

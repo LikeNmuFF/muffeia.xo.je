@@ -326,5 +326,6 @@ $allUsers = getAllUsers($conn, $user_id);
     <script src="../js/mode.js"></script>
     <script src="../js/badword-filter.js"></script>
     <script src="../js/group-room.js"></script>
+<?php if (!empty($_SESSION["is_admin"])): ?><script src="/js/admin-notifications.js"></script><?php endif; ?>
 </body>
 </html>

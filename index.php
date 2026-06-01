@@ -285,30 +285,11 @@ $full_url = $base_url . $safe_uri;
                             <label class="form-label">
                                 <i class="fas fa-align-left" style="margin-right: 6px; color: var(--clr-primary);"></i>Description
                             </label>
-                            <textarea name="description" id="description" class="form-textarea" placeholder="Describe your problem in detail..." required data-badword-action="delete"></textarea>
+                            <textarea name="description" id="description" class="form-textarea" placeholder="Describe your problem...&#10;&#10;Tip: Use #tag for tags, ##Category for category" required data-badword-action="delete"></textarea>
                         </div>
 
                         <?php if (!empty($categories)): ?>
-                        <div class="form-group">
-                            <label class="form-label">
-                                <i class="fas fa-folder" style="margin-right: 6px; color: var(--clr-primary);"></i>Category
-                            </label>
-                            <select name="category_id" class="form-input">
-                                <option value="">Choose a category</option>
-                                <?php foreach ($categories as $category): ?>
-                                    <option value="<?php echo $category['id']; ?>"><?php echo htmlspecialchars($category['name']); ?></option>
-                                <?php endforeach; ?>
-                            </select>
-                        </div>
-                        <?php endif; ?>
-
-                        <?php if (!empty($categories)): ?>
-                        <div class="form-group">
-                            <label class="form-label">
-                                <i class="fas fa-tags" style="margin-right: 6px; color: var(--clr-primary);"></i>Tags
-                            </label>
-                            <input type="text" name="tags" class="form-input" placeholder="Example: school, advice, stress">
-                        </div>
+                        <script>window.AVAILABLE_CATEGORIES = <?php echo json_encode(array_map(function($c) { return ['name' => $c['name'], 'id' => $c['id']]; }, $categories)); ?>;</script>
                         <?php endif; ?>
 
                         <div style="display: flex; align-items: center; gap: var(--space-2); margin-bottom: var(--space-5);">
@@ -948,5 +929,7 @@ $full_url = $base_url . $safe_uri;
 </script>
 <script src="js/post-actions.js"></script>
 <script src="js/report-post.js"></script>
+<script src="js/post-detector.js"></script>
+<?php if (!empty($_SESSION["is_admin"])): ?><script src="/js/admin-notifications.js"></script><?php endif; ?>
 </body>
 </html>

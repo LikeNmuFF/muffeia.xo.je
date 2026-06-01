@@ -43,7 +43,7 @@ if (!$stmt->get_result()->fetch_assoc()) {
 }
 
 $stmt = $conn->prepare("INSERT INTO moderation_queue (content_type, content_id, reason, reported_by, details, status, created_at) VALUES ('post', ?, ?, ?, ?, 'pending', NOW())");
-$stmt->bind_param("isss", $problem_id, $reason, $user_id, $details);
+$stmt->bind_param("iiss", $problem_id, $reason, $user_id, $details);
 $stmt->execute();
 
 $admin_stmt = $conn->prepare("SELECT id FROM users WHERE is_admin = 1 AND id != ?");

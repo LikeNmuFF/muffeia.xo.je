@@ -4,6 +4,7 @@ header('X-Content-Type-Options: nosniff');
 
 include '../includes/db.php';
 include '../includes/security.php';
+require_once '../includes/moderation.php';
 session_start();
 
 // Generate CSRF token if needed
@@ -34,7 +35,7 @@ if ($action === 'login') {
         exit;
     }
 
-    $stmt = $conn->prepare("SELECT id, username, password_hash FROM users WHERE email = ?");
+    $stmt = $conn->prepare("SELECT id, username, password_hash, is_admin FROM users WHERE email = ?");
     $stmt->bind_param("s", $email);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -44,6 +45,7 @@ if ($action === 'login') {
             session_regenerate_id(true);
             $_SESSION['user_id'] = $row['id'];
             $_SESSION['username'] = $row['username'];
+            $_SESSION['is_admin'] = (int)$row['is_admin'];
             echo json_encode(['success' => true, 'redirect' => '../index.php']);
             exit;
         }
@@ -69,6 +71,11 @@ if ($action === 'register') {
     }
     if (!preg_match('/^[a-zA-Z0-9_]+$/', $username)) {
         echo json_encode(['success' => false, 'message' => 'Username can only contain letters, numbers, and underscores.']);
+        exit;
+    }
+
+    if (moderate_text($username)['flagged']) {
+        echo json_encode(['success' => false, 'message' => 'Username contains inappropriate language.']);
         exit;
     }
 
