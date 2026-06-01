@@ -2,12 +2,9 @@
 
 > **A modern, secure community platform where people share their problems and find solutions together.**
 
-```
-    Problem?          ✨ Sparkle          Solution!
-       🔵 ............... 💫 ............... 🟢
-       |                                     |
-       └─────── Problem-Solving Platform ────┘
-```
+<p align="center">
+  <img src="./assets/muffeia_hero_banner.svg" alt="Muffeia Hero Banner - Problem to Solution flow" width="100%" style="max-width: 690px;">
+</p>
 
 ---
 
@@ -52,19 +49,9 @@ To create a **safer alternative to traditional Q&A and support platforms** by em
 
 ## ✨ Key Features
 
-### 🎯 Feature Showcase
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                                                                 │
-│  ✉️  Post Problems      💡 Share Solutions      🔐 Encrypt Chat │
-│                                                                 │
-│  ⭐ Reputation System   🔍 Advanced Search      🏆 Leaderboard  │
-│                                                                 │
-│  📱 Responsive Design   🌙 Dark/Light Mode                      │
-│                                                                 │
-└─────────────────────────────────────────────────────────────────┘
-```
+<p align="center">
+  <img src="./assets/muffeia_features_grid.svg" alt="Muffeia Key Features grid" width="100%" style="max-width: 680px;">
+</p>
 
 ### Core Features
 
@@ -122,32 +109,9 @@ To create a **safer alternative to traditional Q&A and support platforms** by em
 
 ## 🛠️ Technology Stack
 
-```
-┌────────────────────────────────────────┐
-│        FRONTEND LAYER                  │
-│  • HTML5                               │
-│  • CSS3 (Responsive, Dark/Light Mode) │
-│  • JavaScript ES6+ (Vanilla)          │
-│  • Font Awesome 6.4.0 (Icons)         │
-│  • Google Fonts (Outfit, Source Sans) │
-└────────────────────────────────────────┘
-              ⬇️ AJAX
-┌────────────────────────────────────────┐
-│        BACKEND LAYER                   │
-│  • PHP 7.0+                            │
-│  • PHPMailer v7.0 (Email - SMTP)      │
-│  • OAuth2 (Google & Facebook)         │
-│  • OpenSSL (AES-256-CBC Encryption)   │
-│  • Prepared Statements (Security)     │
-└────────────────────────────────────────┘
-              ⬇️ SQL
-┌────────────────────────────────────────┐
-│        DATA LAYER                      │
-│  • MySQL 5.7+ / MariaDB 10.2+         │
-│  • UTF-8MB4 Encoding (Multilingual)   │
-│  • 20+ Relational Tables              │
-└────────────────────────────────────────┘
-```
+<p align="center">
+  <img src="./assets/muffeia_tech_stack.svg" alt="Muffeia Technology Stack - Frontend, Backend, Data layers" width="100%" style="max-width: 680px;">
+</p>
 
 ### Dependencies
 
@@ -522,34 +486,9 @@ fetch('/api/load_posts.php', {
 
 ## 🔐 Security
 
-```
-SECURITY LAYERS
-═══════════════════════════════════════════════════════════
-
-🛡️  Layer 1: AUTHENTICATION
-    ├─ Bcrypt password hashing
-    ├─ OAuth2 (Google & Facebook)
-    └─ Email verification tokens
-
-🛡️  Layer 2: ENCRYPTION
-    ├─ AES-256-CBC for messages
-    ├─ End-to-end encryption
-    └─ HTTPS/TLS for transport
-
-🛡️  Layer 3: INPUT VALIDATION
-    ├─ SQL injection prevention (prepared statements)
-    ├─ XSS protection (HTML escaping)
-    └─ CSRF protection (token validation)
-
-🛡️  Layer 4: RATE LIMITING
-    ├─ 120 requests/minute per IP
-    └─ Anti-brute force protection
-
-🛡️  Layer 5: CONTENT MODERATION
-    ├─ 1,360+ bad word filtering
-    ├─ Obfuscation detection
-    └─ Admin review system
-```
+<p align="center">
+  <img src="./assets/muffeia_security_layers.svg" alt="Muffeia Security Architecture - 5 security layers" width="100%" style="max-width: 680px;">
+</p>
 
 ### Security Best Practices
 
