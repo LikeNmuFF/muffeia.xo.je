@@ -4,9 +4,8 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,50:302b63,100:24243e&height=200&section=header&text=Muffeia&fontSize=72&fontColor=ffffff&fontAlignY=38&desc=Community%20Problem-Sharing%20Platform&descAlignY=60&descSize=20&animation=fadeIn&fontAlign=50" width="100%"/>
 
 <!-- ANIMATED TYPING HEADLINE -->
-<a href="#">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=22&pause=1000&color=A78BFA&center=true&vCenter=true&width=700&lines=🔒+Privacy-first+community+platform;💬+End-to-end+encrypted+messaging;🌍+Where+problems+find+their+solutions;🛡️+Intelligent+content+moderation;⚡+Real-time+notifications+%26+presence" alt="Typing SVG" />
-</a>
+
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=22&pause=1000&color=A78BFA&center=true&vCenter=true&width=700&lines=%F0%9F%94%92+Privacy-first+community+platform;%F0%9F%92%AC+End-to-end+encrypted+messaging;%F0%9F%8C%8D+Where+problems+find+their+solutions;%F0%9F%9B%A1%EF%B8%8F+Intelligent+content+moderation;%E2%9A%A1+Real-time+notifications+%26+presence)](https://github.com/LikeNmuFF)
 
 <br/>
 
@@ -433,7 +432,7 @@ _Making communities safer, one problem at a time._
 
 ![Visitors](https://visitor-badge.laobi.icu/badge?page_id=yourusername.muffeia&style=flat-square&color=blueviolet)
 &nbsp;
-![Last Commit](https://img.shields.io/github/last-commit/yourusername/muffeia?style=flat-square&color=302b63&label=last+commit)
+![Last Commit](https://img.shields.io/github/last-commit/LikeNmuFF/muffeia?style=flat-square&color=302b63&label=last+commit)
 &nbsp;
 **v3.0 · June 2026**
 
