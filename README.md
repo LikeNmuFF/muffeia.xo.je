@@ -1,67 +1,13 @@
 # 🌐 Muffeia - Community Problem-Sharing Platform
 
-<svg width="100%" height="150" viewBox="0 0 800 150" xmlns="http://www.w3.org/2000/svg" style="max-width: 800px; margin: 20px auto; display: block;">
-  <!-- Animated background -->
-  <defs>
-    <style>
-      @keyframes float {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-20px); }
-      }
-      @keyframes pulse {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0.6; }
-      }
-      @keyframes rotate {
-        from { transform: rotate(0deg); }
-        to { transform: rotate(360deg); }
-      }
-      .float { animation: float 3s ease-in-out infinite; }
-      .pulse { animation: pulse 2s ease-in-out infinite; }
-      .rotate { animation: rotate 20s linear infinite; transform-origin: center; }
-    </style>
-    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" />
-    </linearGradient>
-  </defs>
-  
-  <!-- Background circles -->
-  <circle cx="100" cy="75" r="60" fill="url(#grad1)" opacity="0.1" class="rotate" />
-  <circle cx="700" cy="75" r="50" fill="url(#grad1)" opacity="0.15" class="rotate" style="animation-direction: reverse;" />
-  
-  <!-- Main elements -->
-  <g class="float">
-    <!-- Left chat bubble -->
-    <rect x="50" y="40" width="120" height="50" rx="10" fill="#6366f1" opacity="0.9"/>
-    <polygon points="45,80 40,95 55,80" fill="#6366f1"/>
-    <text x="65" y="70" font-family="Arial, sans-serif" font-size="14" fill="white" font-weight="bold">Problem?</text>
-  </g>
-  
-  <g class="float" style="animation-delay: 0.3s;">
-    <!-- Center sparkle -->
-    <circle cx="400" cy="75" r="8" fill="#ec4899" class="pulse"/>
-    <g opacity="0.6">
-      <line x1="400" y1="55" x2="400" y2="45" stroke="#ec4899" stroke-width="2"/>
-      <line x1="400" y1="95" x2="400" y2="105" stroke="#ec4899" stroke-width="2"/>
-      <line x1="380" y1="75" x2="370" y2="75" stroke="#ec4899" stroke-width="2"/>
-      <line x1="420" y1="75" x2="430" y2="75" stroke="#ec4899" stroke-width="2"/>
-    </g>
-  </g>
-  
-  <g class="float" style="animation-delay: 0.6s;">
-    <!-- Right chat bubble -->
-    <rect x="630" y="40" width="120" height="50" rx="10" fill="#10b981" opacity="0.9"/>
-    <polygon points="755,80 760,95 745,80" fill="#10b981"/>
-    <text x="645" y="70" font-family="Arial, sans-serif" font-size="14" fill="white" font-weight="bold">Solution!</text>
-  </g>
-  
-  <!-- Connecting lines -->
-  <line x1="170" y1="65" x2="390" y2="75" stroke="#6366f1" stroke-width="2" opacity="0.5" stroke-dasharray="5,5"/>
-  <line x1="410" y1="75" x2="630" y2="65" stroke="#10b981" stroke-width="2" opacity="0.5" stroke-dasharray="5,5"/>
-</svg>
-
 > **A modern, secure community platform where people share their problems and find solutions together.**
+
+```
+    Problem?          ✨ Sparkle          Solution!
+       🔵 ............... 💫 ............... 🟢
+       |                                     |
+       └─────── Problem-Solving Platform ────┘
+```
 
 ---
 
@@ -106,84 +52,19 @@ To create a **safer alternative to traditional Q&A and support platforms** by em
 
 ## ✨ Key Features
 
-<svg width="100%" height="280" viewBox="0 0 800 280" xmlns="http://www.w3.org/2000/svg" style="max-width: 800px; margin: 20px auto; display: block;">
-  <defs>
-    <style>
-      @keyframes slideIn {
-        from { opacity: 0; transform: translateX(-20px); }
-        to { opacity: 1; transform: translateX(0); }
-      }
-      @keyframes bounce {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-10px); }
-      }
-      .feature-item { animation: slideIn 0.6s ease-out forwards; }
-      .feature-icon { animation: bounce 2s ease-in-out infinite; }
-    </style>
-    <linearGradient id="featureGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:0.2" />
-      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:0.2" />
-    </linearGradient>
-  </defs>
-  
-  <!-- Feature boxes -->
-  <g class="feature-item" style="animation-delay: 0s;">
-    <rect x="20" y="20" width="170" height="120" rx="8" fill="url(#featureGrad)" stroke="#6366f1" stroke-width="2"/>
-    <circle cx="105" cy="50" r="20" fill="#6366f1" class="feature-icon" style="animation-delay: 0s;"/>
-    <text x="105" y="57" font-family="Arial, sans-serif" font-size="28" fill="white" text-anchor="middle">✉️</text>
-    <text x="105" y="100" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle" font-weight="bold">Post Problems</text>
-  </g>
-  
-  <g class="feature-item" style="animation-delay: 0.1s;">
-    <rect x="215" y="20" width="170" height="120" rx="8" fill="url(#featureGrad)" stroke="#10b981" stroke-width="2"/>
-    <circle cx="300" cy="50" r="20" fill="#10b981" class="feature-icon" style="animation-delay: 0.1s;"/>
-    <text x="300" y="57" font-family="Arial, sans-serif" font-size="28" fill="white" text-anchor="middle">💡</text>
-    <text x="300" y="100" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle" font-weight="bold">Share Solutions</text>
-  </g>
-  
-  <g class="feature-item" style="animation-delay: 0.2s;">
-    <rect x="410" y="20" width="170" height="120" rx="8" fill="url(#featureGrad)" stroke="#f59e0b" stroke-width="2"/>
-    <circle cx="495" cy="50" r="20" fill="#f59e0b" class="feature-icon" style="animation-delay: 0.2s;"/>
-    <text x="495" y="57" font-family="Arial, sans-serif" font-size="28" fill="white" text-anchor="middle">🔐</text>
-    <text x="495" y="100" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle" font-weight="bold">Encrypted Chat</text>
-  </g>
-  
-  <g class="feature-item" style="animation-delay: 0.3s;">
-    <rect x="605" y="20" width="170" height="120" rx="8" fill="url(#featureGrad)" stroke="#ec4899" stroke-width="2"/>
-    <circle cx="690" cy="50" r="20" fill="#ec4899" class="feature-icon" style="animation-delay: 0.3s;"/>
-    <text x="690" y="57" font-family="Arial, sans-serif" font-size="28" fill="white" text-anchor="middle">⭐</text>
-    <text x="690" y="100" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle" font-weight="bold">Reputation System</text>
-  </g>
-  
-  <!-- Bottom row -->
-  <g class="feature-item" style="animation-delay: 0.4s;">
-    <rect x="20" y="160" width="170" height="120" rx="8" fill="url(#featureGrad)" stroke="#3b82f6" stroke-width="2"/>
-    <circle cx="105" cy="190" r="20" fill="#3b82f6" class="feature-icon" style="animation-delay: 0.4s;"/>
-    <text x="105" y="197" font-family="Arial, sans-serif" font-size="28" fill="white" text-anchor="middle">🔍</text>
-    <text x="105" y="240" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle" font-weight="bold">Advanced Search</text>
-  </g>
-  
-  <g class="feature-item" style="animation-delay: 0.5s;">
-    <rect x="215" y="160" width="170" height="120" rx="8" fill="url(#featureGrad)" stroke="#8b5cf6" stroke-width="2"/>
-    <circle cx="300" cy="190" r="20" fill="#8b5cf6" class="feature-icon" style="animation-delay: 0.5s;"/>
-    <text x="300" y="197" font-family="Arial, sans-serif" font-size="28" fill="white" text-anchor="middle">🏆</text>
-    <text x="300" y="240" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle" font-weight="bold">Leaderboard</text>
-  </g>
-  
-  <g class="feature-item" style="animation-delay: 0.6s;">
-    <rect x="410" y="160" width="170" height="120" rx="8" fill="url(#featureGrad)" stroke="#06b6d4" stroke-width="2"/>
-    <circle cx="495" cy="190" r="20" fill="#06b6d4" class="feature-icon" style="animation-delay: 0.6s;"/>
-    <text x="495" y="197" font-family="Arial, sans-serif" font-size="28" fill="white" text-anchor="middle">📱</text>
-    <text x="495" y="240" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle" font-weight="bold">Responsive Design</text>
-  </g>
-  
-  <g class="feature-item" style="animation-delay: 0.7s;">
-    <rect x="605" y="160" width="170" height="120" rx="8" fill="url(#featureGrad)" stroke="#14b8a6" stroke-width="2"/>
-    <circle cx="690" cy="190" r="20" fill="#14b8a6" class="feature-icon" style="animation-delay: 0.7s;"/>
-    <text x="690" y="197" font-family="Arial, sans-serif" font-size="28" fill="white" text-anchor="middle">🌙</text>
-    <text x="690" y="240" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle" font-weight="bold">Dark/Light Mode</text>
-  </g>
-</svg>
+### 🎯 Feature Showcase
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                                                                 │
+│  ✉️  Post Problems      💡 Share Solutions      🔐 Encrypt Chat │
+│                                                                 │
+│  ⭐ Reputation System   🔍 Advanced Search      🏆 Leaderboard  │
+│                                                                 │
+│  📱 Responsive Design   🌙 Dark/Light Mode                      │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+```
 
 ### Core Features
 
@@ -242,30 +123,30 @@ To create a **safer alternative to traditional Q&A and support platforms** by em
 ## 🛠️ Technology Stack
 
 ```
-┌─────────────────────────────────────────────────────┐
-│  FRONTEND LAYER                                      │
-│  • HTML5                                             │
-│  • CSS3 (Responsive, Dark/Light Mode)               │
-│  • JavaScript (ES6+, Vanilla - No framework)        │
-│  • Font Awesome 6.4.0 (Icons)                       │
-│  • Google Fonts (Outfit, Source Sans 3)             │
-└─────────────────────────────────────────────────────┘
-                       ↓ AJAX
-┌─────────────────────────────────────────────────────┐
-│  BACKEND LAYER                                       │
-│  • PHP 7.0+ (Object-Oriented & Procedural)          │
-│  • PHPMailer v7.0 (Email - SMTP)                    │
-│  • OAuth2 (Google & Facebook)                       │
-│  • OpenSSL (AES-256-CBC Encryption)                 │
-│  • Prepared Statements (Security)                   │
-└─────────────────────────────────────────────────────┘
-                       ↓ SQL
-┌─────────────────────────────────────────────────────┐
-│  DATA LAYER                                          │
-│  • MySQL 5.7+ / MariaDB 10.2+                       │
-│  • UTF-8MB4 Encoding (Multilingual)                 │
-│  • 20+ Relational Tables                            │
-└─────────────────────────────────────────────────────┘
+┌────────────────────────────────────────┐
+│        FRONTEND LAYER                  │
+│  • HTML5                               │
+│  • CSS3 (Responsive, Dark/Light Mode) │
+│  • JavaScript ES6+ (Vanilla)          │
+│  • Font Awesome 6.4.0 (Icons)         │
+│  • Google Fonts (Outfit, Source Sans) │
+└────────────────────────────────────────┘
+              ⬇️ AJAX
+┌────────────────────────────────────────┐
+│        BACKEND LAYER                   │
+│  • PHP 7.0+                            │
+│  • PHPMailer v7.0 (Email - SMTP)      │
+│  • OAuth2 (Google & Facebook)         │
+│  • OpenSSL (AES-256-CBC Encryption)   │
+│  • Prepared Statements (Security)     │
+└────────────────────────────────────────┘
+              ⬇️ SQL
+┌────────────────────────────────────────┐
+│        DATA LAYER                      │
+│  • MySQL 5.7+ / MariaDB 10.2+         │
+│  • UTF-8MB4 Encoding (Multilingual)   │
+│  • 20+ Relational Tables              │
+└────────────────────────────────────────┘
 ```
 
 ### Dependencies
@@ -287,10 +168,6 @@ muffeia/
 ├── 📄 landing.php                  # Public landing page
 ├── 📄 post_problem.php             # Problem submission
 ├── 📄 submit_solution.php          # Solution submission
-├── 📄 send_message.php             # Message endpoint
-├── 📄 verify_email.php             # Email verification handler
-├── 📄 migrate.php                  # Database migration trigger
-├── 📄 setup_admin.php              # Admin setup utility
 │
 ├── 📁 api/                         # AJAX Endpoints (20+ files)
 │   ├── load_posts.php              # Paginated posts
@@ -298,26 +175,20 @@ muffeia/
 │   ├── post_message.php            # Send encrypted message
 │   ├── bookmark_post.php           # Save posts
 │   ├── report_post.php             # Flag content
-│   ├── accept_solution.php         # Mark best solution
-│   ├── check_notifications.php     # Real-time notifications
-│   └── ...
+│   └── ... (15+ more endpoints)
 │
 ├── 📁 auth/                        # Authentication (6 files)
 │   ├── login.php                   # Login interface
 │   ├── api.php                     # OAuth & login endpoint
 │   ├── logout.php                  # Logout
-│   ├── forgot_password.php         # Password reset
-│   └── reset_password.php          # Reset handler
+│   └── forgot_password.php         # Password reset
 │
 ├── 📁 pages/                       # Page Views (17 files)
 │   ├── admin_dashboard.php         # Admin panel
 │   ├── view_problem.php            # Problem detail
 │   ├── profile.php                 # User profile
 │   ├── message.php                 # Direct messaging
-│   ├── notifications.php           # Notifications
-│   ├── search.php                  # Search results
-│   ├── leaderboard.php             # Rankings
-│   └── ...
+│   └── ... (13+ more pages)
 │
 ├── 📁 includes/                    # Core Libraries (18 files)
 │   ├── config.php                  # Database credentials ⚠️ (ignored)
@@ -325,43 +196,39 @@ muffeia/
 │   ├── moderation.php              # Content filtering
 │   ├── encryption.php              # AES-256-CBC
 │   ├── reputation.php              # Points & badges
-│   ├── categories_tags.php         # Organization
-│   ├── email_verification.php      # Email system
-│   ├── rate_limiter.php            # Anti-spam
-│   ├── security.php                # Security utils
-│   ├── migrations.php              # Schema definitions
-│   └── badwords.txt                # 1,360+ terms
+│   └── ... (13+ more libraries)
 │
 ├── 📁 js/                          # JavaScript (9 files)
 │   ├── scripts.js                  # Main logic
-│   ├── logins.js                   # Auth handlers
-│   ├── post-actions.js             # Post interactions
 │   ├── notifications.js            # Real-time updates
-│   └── mode.js                     # Theme toggle
+│   └── ... (7+ more scripts)
 │
 ├── 📁 css/                         # Stylesheets (13 files)
 │   ├── muffeia-ui.css              # Main styles
-│   ├── modern-theme.css            # Design
-│   ├── responsive.css              # Mobile
-│   ├── darkmodes.css               # Dark mode
-│   └── all-min.css                 # Minified
+│   ├── responsive.css              # Mobile styles
+│   └── ... (11+ more stylesheets)
 │
-├── 📁 community/                   # Static Pages
+├── 📁 community/                   # Static Pages (5 files)
 │   ├── about.php
 │   ├── guidelines.php
 │   ├── privacy.php
 │   └── contact.php
 │
-├── 📁 uploads/                     # User Files
+├── 📁 uploads/                     # User-Generated Files
 ├── 📁 vendor/                      # Composer Dependencies
 │
-├── 🐳 .htaccess                   # Apache config
-├── 🤖 robots.txt                  # SEO
-├── 📦 composer.json               # Dependencies
-├── 📦 composer.lock               # Locked versions
-├── 🚫 .gitignore                  # Sensitive files
-└── 📖 README.md                   # This file
+├── .gitignore                      # Sensitive files to ignore
+├── .htaccess                       # Apache configuration
+├── robots.txt                      # SEO configuration
+├── composer.json                   # PHP dependencies
+└── composer.lock                   # Locked versions
 ```
+
+**Statistics:**
+- Total PHP files: 299
+- JavaScript files: 9
+- CSS files: 13
+- Total project size: 19MB
 
 ---
 
@@ -462,12 +329,6 @@ UPDATE users SET is_admin = TRUE
 WHERE email = 'your_email@example.com';
 ```
 
-Or use the setup utility:
-
-```bash
-php setup_admin.php
-```
-
 ### Step 6: Start Development Server
 
 ```bash
@@ -493,43 +354,36 @@ Visit `http://localhost:8000` in your browser.
 
 ### Database Configuration
 
-Edit `includes/config.php` (or use `.env`):
+Edit `.env` file:
 
-```php
-define('DB_HOST', getenv('DB_HOST') ?: 'localhost');
-define('DB_USER', getenv('DB_USER') ?: 'root');
-define('DB_PASS', getenv('DB_PASS') ?: '');
-define('DB_NAME', getenv('DB_NAME') ?: 'muffeia');
-define('DB_CHARSET', 'utf8mb4');
-define('TIMEZONE', getenv('APP_TIMEZONE') ?: 'Asia/Manila');
+```env
+DB_HOST=localhost
+DB_USER=root
+DB_PASS=your_secure_password
+DB_NAME=muffeia
 ```
 
 ### Email Configuration
 
-Configure SMTP in `includes/email_verification.php`:
+Configure SMTP in `.env`:
 
-```php
-$mail->Host = getenv('MAIL_HOST');
-$mail->Port = getenv('MAIL_PORT');
-$mail->Username = getenv('MAIL_USER');
-$mail->Password = getenv('MAIL_PASS');
+```env
+MAIL_HOST=smtp.gmail.com
+MAIL_PORT=587
+MAIL_USER=your_email@gmail.com
+MAIL_PASS=your_app_password
 ```
 
 ### OAuth Configuration
 
-Set up Google OAuth in `includes/config.php`:
+Set up credentials in `.env`:
 
-```php
-$googleClient = new \League\OAuth2\Client\Provider\Google([
-    'clientId' => getenv('GOOGLE_CLIENT_ID'),
-    'clientSecret' => getenv('GOOGLE_CLIENT_SECRET'),
-    'redirectUri' => getenv('APP_URL') . '/auth/api.php?provider=google',
-]);
+```env
+GOOGLE_CLIENT_ID=your_client_id.apps.googleusercontent.com
+GOOGLE_CLIENT_SECRET=your_client_secret
+FACEBOOK_CLIENT_ID=your_facebook_app_id
+FACEBOOK_CLIENT_SECRET=your_facebook_app_secret
 ```
-
-### Content Moderation
-
-Edit bad words list in `includes/badwords.txt` (one per line).
 
 ### Rate Limiting
 
@@ -595,13 +449,6 @@ define('RATE_LIMIT_WINDOW', 60);        // Time window (seconds)
 - Suspend/ban users if needed
 - Manage categories and tags
 
-#### View Statistics
-
-- User growth trends
-- Most active categories
-- Top contributors
-- System health metrics
-
 ---
 
 ## 🔌 API Endpoints
@@ -654,7 +501,7 @@ All API endpoints use **POST** requests with **CSRF tokens** and return **JSON**
 | `POST /api/delete_user.php` | Delete account |
 | `POST /api/schedule_account_deletion.php` | Request deletion |
 
-### Examples
+### Example API Call
 
 **Fetch Posts:**
 ```javascript
@@ -671,76 +518,38 @@ fetch('/api/load_posts.php', {
 .then(data => console.log(data));
 ```
 
-**Send Encrypted Message:**
-```javascript
-fetch('/api/post_message.php', {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify({
-    csrf_token: csrfToken,
-    recipient_id: 123,
-    message: "Hello, this is encrypted!"
-  })
-})
-.then(r => r.json());
-```
-
 ---
 
 ## 🔐 Security
 
-<svg width="100%" height="200" viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg" style="max-width: 800px; margin: 20px auto; display: block;">
-  <defs>
-    <style>
-      @keyframes shield {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-5px); }
-      }
-      .shield { animation: shield 2s ease-in-out infinite; }
-    </style>
-  </defs>
-  
-  <!-- Title -->
-  <text x="400" y="30" font-family="Arial, sans-serif" font-size="24" fill="#000" text-anchor="middle" font-weight="bold">Security Layers</text>
-  
-  <!-- Layer 1: Authentication -->
-  <g class="shield">
-    <rect x="50" y="50" width="150" height="80" rx="5" fill="#10b981" opacity="0.3" stroke="#10b981" stroke-width="2"/>
-    <text x="125" y="70" font-family="Arial, sans-serif" font-size="12" fill="#000" text-anchor="middle" font-weight="bold">Authentication</text>
-    <text x="125" y="90" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">Bcrypt Hashing</text>
-    <text x="125" y="105" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">OAuth2 Support</text>
-  </g>
-  
-  <!-- Layer 2: Encryption -->
-  <g class="shield" style="animation-delay: 0.2s;">
-    <rect x="325" y="50" width="150" height="80" rx="5" fill="#f59e0b" opacity="0.3" stroke="#f59e0b" stroke-width="2"/>
-    <text x="400" y="70" font-family="Arial, sans-serif" font-size="12" fill="#000" text-anchor="middle" font-weight="bold">Encryption</text>
-    <text x="400" y="90" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">AES-256-CBC</text>
-    <text x="400" y="105" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">End-to-End</text>
-  </g>
-  
-  <!-- Layer 3: Validation -->
-  <g class="shield" style="animation-delay: 0.4s;">
-    <rect x="600" y="50" width="150" height="80" rx="5" fill="#ec4899" opacity="0.3" stroke="#ec4899" stroke-width="2"/>
-    <text x="675" y="70" font-family="Arial, sans-serif" font-size="12" fill="#000" text-anchor="middle" font-weight="bold">Input Validation</text>
-    <text x="675" y="90" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">SQL Injection Prevention</text>
-    <text x="675" y="105" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">XSS Protection</text>
-  </g>
-  
-  <!-- Layer 4: Rate Limiting -->
-  <g class="shield" style="animation-delay: 0.6s;">
-    <rect x="180" y="145" width="150" height="45" rx="5" fill="#06b6d4" opacity="0.3" stroke="#06b6d4" stroke-width="2"/>
-    <text x="255" y="160" font-family="Arial, sans-serif" font-size="11" fill="#000" text-anchor="middle" font-weight="bold">Rate Limiting</text>
-    <text x="255" y="178" font-family="Arial, sans-serif" font-size="9" fill="#333" text-anchor="middle">120 req/min per IP</text>
-  </g>
-  
-  <!-- Layer 5: CSRF Protection -->
-  <g class="shield" style="animation-delay: 0.8s;">
-    <rect x="470" y="145" width="150" height="45" rx="5" fill="#8b5cf6" opacity="0.3" stroke="#8b5cf6" stroke-width="2"/>
-    <text x="545" y="160" font-family="Arial, sans-serif" font-size="11" fill="#000" text-anchor="middle" font-weight="bold">CSRF Protection</text>
-    <text x="545" y="178" font-family="Arial, sans-serif" font-size="9" fill="#333" text-anchor="middle">Token Validation</text>
-  </g>
-</svg>
+```
+SECURITY LAYERS
+═══════════════════════════════════════════════════════════
+
+🛡️  Layer 1: AUTHENTICATION
+    ├─ Bcrypt password hashing
+    ├─ OAuth2 (Google & Facebook)
+    └─ Email verification tokens
+
+🛡️  Layer 2: ENCRYPTION
+    ├─ AES-256-CBC for messages
+    ├─ End-to-end encryption
+    └─ HTTPS/TLS for transport
+
+🛡️  Layer 3: INPUT VALIDATION
+    ├─ SQL injection prevention (prepared statements)
+    ├─ XSS protection (HTML escaping)
+    └─ CSRF protection (token validation)
+
+🛡️  Layer 4: RATE LIMITING
+    ├─ 120 requests/minute per IP
+    └─ Anti-brute force protection
+
+🛡️  Layer 5: CONTENT MODERATION
+    ├─ 1,360+ bad word filtering
+    ├─ Obfuscation detection
+    └─ Admin review system
+```
 
 ### Security Best Practices
 
@@ -753,30 +562,19 @@ Never hardcode sensitive data. Use `.env` file:
 DB_HOST=localhost
 DB_USER=root
 DB_PASS=secure_password
-MAIL_PASS=smtp_password
-GOOGLE_CLIENT_SECRET=xxx
-```
-
-Load in config:
-```php
-$db_password = getenv('DB_PASS') ?: '';
 ```
 
 #### 2. **Password Security**
 
-- Passwords hashed with **bcrypt** (PASSWORD_DEFAULT)
-- Never log or display passwords
-- Force password reset after admin compromise
-- Implement password expiration policy
-
 ```php
+// Hash passwords with bcrypt
 $hashed = password_hash($password, PASSWORD_DEFAULT);
+
+// Verify password
 if (password_verify($input, $hashed)) { /* Login */ }
 ```
 
 #### 3. **SQL Injection Prevention**
-
-Use **prepared statements** exclusively:
 
 ```php
 // ✅ GOOD: Prepared statement
@@ -784,13 +582,11 @@ $stmt = $conn->prepare("SELECT * FROM users WHERE email = ?");
 $stmt->bind_param("s", $email);
 $stmt->execute();
 
-// ❌ BAD: String concatenation
+// ❌ BAD: Never do this
 $query = "SELECT * FROM users WHERE email = '" . $email . "'";
 ```
 
 #### 4. **XSS Protection**
-
-Escape all user input in HTML:
 
 ```php
 // ✅ GOOD: HTML escaping
@@ -801,8 +597,6 @@ echo $user_input;
 ```
 
 #### 5. **CSRF Protection**
-
-All forms require CSRF tokens:
 
 ```php
 // Generate token
@@ -817,10 +611,8 @@ if ($_POST['csrf_token'] !== $_SESSION['csrf_token']) {
 
 #### 6. **Message Encryption**
 
-End-to-end encryption with AES-256-CBC:
-
 ```php
-// Encrypt
+// Encrypt with AES-256-CBC
 $encrypted = openssl_encrypt($message, 'AES-256-CBC', $key, 0, $iv);
 
 // Decrypt
@@ -828,8 +620,6 @@ $decrypted = openssl_decrypt($encrypted, 'AES-256-CBC', $key, 0, $iv);
 ```
 
 #### 7. **Rate Limiting**
-
-Prevent brute force attacks:
 
 ```php
 // Check limit
@@ -844,10 +634,8 @@ recordRequest($ip);
 
 #### 8. **Content Moderation**
 
-Automatic filtering of inappropriate content:
-
 ```php
-// Bad word detection
+// Automatic filtering
 if (containsModeratedContent($text)) {
     $text = maskProfanity($text);  // Mask as **
 }
@@ -882,17 +670,16 @@ if (containsModeratedContent($text)) {
    put -r muffeia/* /public_html/
    ```
 
-2. **Create database**
-   - Via hosting control panel (cPanel, Plesk)
+2. **Create database via control panel**
+   - cPanel or Plesk
    - Run migrations
 
-3. **Configure `.env`**
+3. **Configure `.env` for production**
    - Set production database credentials
    - Set production SMTP credentials
 
 4. **Enable HTTPS**
    - Use Let's Encrypt (free)
-   - Update `.htaccess` to force HTTPS
 
 ### Option 2: VPS (e.g., DigitalOcean, Linode)
 
@@ -909,23 +696,7 @@ if (containsModeratedContent($text)) {
    composer install
    ```
 
-3. **Configure Nginx**
-   ```nginx
-   server {
-       listen 80;
-       server_name muffeia.com;
-       root /var/www/muffeia;
-       
-       location ~ \.php$ {
-           fastcgi_pass unix:/run/php/php-fpm.sock;
-           fastcgi_index index.php;
-           include fastcgi_params;
-           fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-       }
-   }
-   ```
-
-4. **Set SSL with Certbot**
+3. **Set SSL with Certbot**
    ```bash
    sudo apt install certbot python3-certbot-nginx
    sudo certbot --nginx -d muffeia.com
@@ -939,7 +710,6 @@ FROM php:7.4-apache
 RUN docker-php-ext-install mysqli pdo pdo_mysql
 RUN a2enmod rewrite
 COPY . /var/www/html/
-COPY vendor /var/www/html/vendor
 ```
 
 **docker-compose.yml:**
@@ -1068,41 +838,12 @@ This project is licensed under the **MIT License** - see [LICENSE](LICENSE) file
 
 ---
 
-<svg width="100%" height="100" viewBox="0 0 800 100" xmlns="http://www.w3.org/2000/svg" style="max-width: 800px; margin: 40px auto; display: block;">
-  <defs>
-    <style>
-      @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-      }
-      .footer-text { animation: fadeIn 1s ease-in-out; }
-    </style>
-  </defs>
-  
-  <line x1="0" y1="20" x2="800" y2="20" stroke="#ddd" stroke-width="2"/>
-  
-  <text x="400" y="55" font-family="Arial, sans-serif" font-size="16" fill="#6366f1" text-anchor="middle" font-weight="bold" class="footer-text">
-    Built with ❤️ by the Muffeia Community
-  </text>
-  
-  <text x="400" y="80" font-family="Arial, sans-serif" font-size="12" fill="#999" text-anchor="middle" class="footer-text" style="animation-delay: 0.3s;">
-    © 2026 Muffeia. Making communities safer, one problem at a time.
-  </text>
-</svg>
+## 🎉 Built with ❤️ by the Muffeia Community
+
+© 2026 Muffeia. Making communities safer, one problem at a time.
 
 ---
 
 **Last Updated**: June 1, 2026  
 **Version**: 3.0  
 **Status**: Production Ready ✅
-
----
-
-### Quick Links
-
-- 🌐 [Visit Muffeia](https://muffeia.xo.je)
-- 📚 [API Reference](API_REFERENCE.md)
-- 🚀 [Quick Start](QUICK_SETUP.md)
-- 🔧 [Setup Guide](SETUP_GUIDE.md)
-- 🐛 [Report Issues](https://github.com/yourusername/muffeia/issues)
-- 💡 [Request Feature](https://github.com/yourusername/muffeia/issues/new)
