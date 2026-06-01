@@ -1,0 +1,252 @@
+# ============================================
+# SENSITIVE CONFIGURATION & CREDENTIALS
+# ============================================
+
+# Database configuration with credentials
+includes/config.php
+includes/db.php
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# API keys and credentials
+*.key
+*.pem
+*.pub
+secrets.json
+credentials.json
+
+# OAuth credentials
+oauth_*.php
+*oauth*config*.php
+
+# Email configuration
+*mail*config*.php
+*smtp*config*.php
+
+# ============================================
+# LOGS & ERROR FILES
+# ============================================
+
+# PHP error logs
+*.log
+auth/php_errors.log
+error.log
+debug.log
+
+# Database error logs
+database.log
+sql.log
+
+# Application logs
+logs/
+log/
+
+# ============================================
+# TEMPORARY & CACHE FILES
+# ============================================
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+.AppleDouble
+.LSOverride
+._*
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.env.local.php
+.editorconfig.local
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+.#*
+
+# Cache files
+cache/
+.cache/
+*.cache
+
+# ============================================
+# DEPENDENCIES & VENDOR
+# ============================================
+
+# Composer dependencies
+vendor/
+composer.lock (optional - keep in repo for stability)
+
+# Node modules (if added later)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# ============================================
+# USER UPLOADS & GENERATED FILES
+# ============================================
+
+# User uploaded files
+uploads/
+uploads/*
+!uploads/.gitkeep
+
+# User-generated avatars, images
+profile_pics/
+avatars/
+user_uploads/
+
+# Temporary upload directories
+tmp/
+temp/
+*.tmp
+
+# ============================================
+# DATABASE & DATA FILES
+# ============================================
+
+# Database exports
+*.sql
+*.sql.gz
+*.sql.bak
+database_backup/
+backups/
+
+# SQLite databases (if used)
+*.db
+*.sqlite
+*.sqlite3
+
+# Data files
+data/*.csv
+data/*.xlsx
+data/*.json (except configs)
+
+# ============================================
+# SENSITIVE DOCUMENTATION
+# ============================================
+
+# Local setup notes with credentials
+LOCAL_SETUP.md
+SETUP_NOTES.md
+CREDENTIALS.md
+SECRETS.md
+*.secrets
+
+# Private documentation
+PRIVATE_*.md
+INTERNAL_*.md
+
+# ============================================
+# TESTING & DEBUG FILES
+# ============================================
+
+# Test files with sensitive data
+test_credentials.php
+test_config.php
+test_secrets.php
+test_*.local.php
+
+# Debug files
+debug/
+debug_*.php
+
+# Browser cookies & session data
+cookies.txt
+session_data.txt
+.session/
+
+# ============================================
+# THIRD-PARTY & EXTERNAL TOOLS
+# ============================================
+
+# Docker secrets
+.docker/
+docker-compose.override.yml
+docker.env
+
+# CI/CD secrets
+.github/workflows/*.secret
+.gitlab-ci.override.yml
+
+# ============================================
+# BUILD & DEPLOYMENT FILES
+# ============================================
+
+# Build artifacts
+dist/
+build/
+
+# Compiled assets (if minified in future)
+*.min.js.map
+*.min.css.map
+
+# FTP/Deployment scripts with credentials
+deploy.sh
+deploy.local.sh
+ftp_config.txt
+deployment_*.php
+
+# ============================================
+# OS & SYSTEM FILES
+# ============================================
+
+# Windows
+Thumbs.db
+.DS_Store
+Desktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+.directory
+
+# ============================================
+# VERSION CONTROL
+# ============================================
+
+# Git-related
+.git/
+.gitkeep (include these)
+.github/secrets/
+
+# Mercurial
+.hg/
+.hgignore
+
+# ============================================
+# COMMON PATTERNS TO EXCLUDE
+# ============================================
+
+# All hidden files except .gitignore
+.*
+!.gitignore
+!.htaccess
+!.github/
+!.editorconfig
+
+# All files matching patterns
+*_local.*
+*_dev.*
+*_test.*
+*_backup.*
+
+# ============================================
+# EXCEPTIONS - FILES TO KEEP
+# ============================================
+
+# Keep these files even though they're usually ignored
+!.gitkeep
+!.htaccess
+!.github/workflows/*.yml
+!vendor/ (optional - comment out if you want to keep vendor)

@@ -1,0 +1,12 @@
+# ========================================
+# MUFFEIA - Anonymous Support Platform
+# https://muffeia.xo.je
+# ========================================
+
+User-agent: *
+Allow: /
+Disallow: /includes/
+Disallow: /auth/logout.php
+Disallow: /api/
+
+Sitemap: https://muffeia.xo.je/sitemap.xml

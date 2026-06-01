@@ -1,0 +1,17 @@
+/* Most styling is handled by forall.css */
+
+.solution {
+    /* The .solution class is already styled as a card by forall.css */
+    /* You can add specific tweaks here if needed */
+    margin-top: 1.5rem;
+}
+
+.solution p:first-child {
+    font-size: 1.05rem;
+    color: var(--text-primary);
+    line-height: 1.7;
+}
+
+.solution p strong {
+    color: var(--text-primary);
+}
